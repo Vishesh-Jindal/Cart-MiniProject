@@ -14,10 +14,10 @@ const Cart = (props) => {
             onDecreaseQuantity={props.onDecreaseQuantity}
             onDeleteProduct={props.onDeleteProduct}
           />
-        )
+        );
       })}
     </div>
   );
-}
+};
 
 export default Cart;
