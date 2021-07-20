@@ -3,6 +3,16 @@ import React from 'react';
 const Navbar = (props) => {
   return (
     <div style={styles.nav}>
+      <div
+        style={{
+          position: 'absolute',
+          left: '50%',
+          fontSize: 28,
+          fontFamily: 'monospace',
+        }}
+      >
+        Cart
+      </div>
       <div style={styles.cartIconContainer}>
         <img
           style={styles.cartIcon}
@@ -22,16 +32,18 @@ const styles = {
   },
   nav: {
     height: 70,
-    background: '#4267b2',
+    background: 'yellow',
     display: 'flex',
-    justifyContent: 'flex-end',
+    position: 'relative',
     alignItems: 'center',
   },
   cartIconContainer: {
-    position: 'relative',
+    position: 'absolute',
+    right: 0,
   },
   cartCount: {
-    background: 'yellow',
+    background: 'black',
+    color: 'white',
     borderRadius: '50%',
     padding: '4px 8px',
     position: 'absolute',

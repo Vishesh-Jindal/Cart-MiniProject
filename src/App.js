@@ -31,10 +31,8 @@ class App extends React.Component {
       ],
     };
     // this.increaseQuantity = this.increaseQuantity.bind(this);
-    // this.testing();
   }
   handleIncreaseQuantity = (product) => {
-    console.log('Heyy please inc the qty of ', product);
     const { products } = this.state;
     const index = products.indexOf(product);
 
@@ -45,7 +43,6 @@ class App extends React.Component {
     });
   };
   handleDecreaseQuantity = (product) => {
-    console.log('Heyy please inc the qty of ', product);
     const { products } = this.state;
     const index = products.indexOf(product);
 
@@ -58,6 +55,10 @@ class App extends React.Component {
     this.setState({
       products,
     });
+
+    if (products[index].qty === 0) {
+      this.handleDeleteProduct(product.id);
+    }
   };
   handleDeleteProduct = (id) => {
     const { products } = this.state;
