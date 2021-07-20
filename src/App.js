@@ -57,9 +57,6 @@ class App extends React.Component {
         qty: products[index].qty - 1,
       })
       .then(() => {
-        if (this.state.products[index].qty === 0) {
-          this.handleDeleteProduct(product.id);
-        }
         console.log('firebase updated Successfully');
       })
       .catch(() => {
